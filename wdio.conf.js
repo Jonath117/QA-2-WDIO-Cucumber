@@ -52,7 +52,8 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [{
+    capabilities: [
+        {
          browserName: 'chrome',
         'goog:chromeOptions': {
             args: [
@@ -60,8 +61,10 @@ exports.config = {
                 '--disable-extensions', // Deshabilitar extensiones
                 '--start-maximized'     // Maximizar ventana
             ]
+            },
         },
-    }],
+        {browserName: 'edge'},
+    ],
 
     //
     // ===================
