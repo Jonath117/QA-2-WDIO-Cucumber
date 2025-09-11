@@ -4,7 +4,7 @@ Feature: Login en HerokuApp
 Scenario: Login exitoso con credenciales válidas
     Given estoy en la página de login
     When ingreso "tomsmith" y "SuperSecretPassword!"
-    Then debería ver el mensaje "You logged into a secure area!"
+    Then debería ver el mensaje "You logged into a secure areas!"
 
 @loginInvalido  
 Scenario: Login fallido con credenciales inválidas
