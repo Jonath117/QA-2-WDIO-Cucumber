@@ -52,19 +52,29 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [
-        {
-         browserName: 'chrome',
+capabilities: [
+    {
+        maxInstances: 1, // opcional: cuántas instancias de Chrome quieres lanzar
+        browserName: 'chrome',
         'goog:chromeOptions': {
             args: [
                 '--disable-infobars',   // Quitar "Chrome está siendo controlado..."
                 '--disable-extensions', // Deshabilitar extensiones
                 '--start-maximized'     // Maximizar ventana
             ]
-            },
-        },
-        {browserName: 'edge'},
-    ],
+        }
+    },
+    // {
+    //     browserName: 'MicrosoftEdge',
+    //     'ms:edgeOptions': {
+    //         args: [
+    //             '--disable-infobars',
+    //             '--disable-extensions',
+    //             '--start-maximized'
+    //         ]
+    //     }
+    // }
+],
 
     //
     // ===================
@@ -113,7 +123,13 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    // services: [],
+    //services: [
+        //['chromedriver'],
+        //['edgedriver']
+    //],
+
+
+
     //
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber

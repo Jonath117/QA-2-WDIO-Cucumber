@@ -1,9 +1,9 @@
 import Page from './page.js'
 
 class LoginPage extends Page {
-    get inputUsername() { return $('#username') }
+    get inputUsername() { return $('#user-name') }
     get inputPassword() { return $('#password') }
-    get btnLogin() { return $('button[type="submit"]') }
+    get btnLogin() { return $('input[type="submit"]'); }
     get flashMessage() { return $('#flash') }
 
     async login(username, password) {
@@ -13,7 +13,7 @@ class LoginPage extends Page {
     }
 
     async open() {
-        await super.open('login')
+        await super.open('')
     }
 }
 

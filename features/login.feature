@@ -1,10 +1,12 @@
-Feature: Login en HerokuApp
+Feature: Login en Swag labs
     
 @loginValido
 Scenario: Login exitoso con credenciales válidas
     Given estoy en la página de login
-    When ingreso "tomsmith" y "SuperSecretPassword!"
-    Then debería ver el mensaje "You logged into a secure area!"
+    When ingreso "standard_user" y "secret_sauce"
+    Then deberia ver los productos disponibles
+    Then deberia ver al menos un producto
+
 
 @loginInvalido  
 Scenario: Login fallido con credenciales inválidas
