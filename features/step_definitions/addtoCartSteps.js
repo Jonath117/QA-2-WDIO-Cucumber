@@ -16,7 +16,6 @@ When('haga click en el boton add', async () => {
 
 Then('deberia haber un item en el carrito', async () => {
       await getInventory.shoppingCartLink.click();
-
       await cartPage.ShoppingCartContainer.waitForDisplayed({ timeout: 5000});
 
       const items = await cartPage.cartItems;
