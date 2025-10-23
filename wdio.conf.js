@@ -52,29 +52,17 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-capabilities: [
-    {
-        maxInstances: 1, // opcional: cuántas instancias de Chrome quieres lanzar
-        browserName: 'chrome',
+ capabilities: [
+        {
+         browserName: 'chrome',
         'goog:chromeOptions': {
             args: [
-                '--disable-infobars',   // Quitar "Chrome está siendo controlado..."
-                '--disable-extensions', // Deshabilitar extensiones
-                '--start-maximized'     // Maximizar ventana
-            ]
+                '--headless', '--no-sandbox', '--disable-dev-shm-usage'
+                ]
+            },
         }
-    },
-    // {
-    //     browserName: 'MicrosoftEdge',
-    //     'ms:edgeOptions': {
-    //         args: [
-    //             '--disable-infobars',
-    //             '--disable-extensions',
-    //             '--start-maximized'
-    //         ]
-    //     }
-    // }
-],
+    ]
+,
 
     //
     // ===================
