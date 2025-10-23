@@ -17,7 +17,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'tarea-6-allure', url: 'https://github.com/RoyGuido/WDIO_Example.git'
+                git branch: 'tarea-6-allure', url: 'https://github.com/Jonath117/QA-2-WDIO-Cucumber.git'
             }
         }
 
