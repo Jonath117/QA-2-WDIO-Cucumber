@@ -4,6 +4,7 @@ class LoginPage extends Page {
     get inputUsername() { return $('#user-name') }
     get inputPassword() { return $('#password') }
     get btnLogin() { return $('input[type="submit"]'); }
+    get errorMessage() { return $('h3[data-test="error"]') }
     get flashMessage() { return $('#flash') }
 
     async login(username, password) {

@@ -18,3 +18,10 @@ Then('deberia ver al menos un producto', async () => {
     const items = await getInventory.inventoryItems;
     expect(items.length).toBeGreaterThan(0);
 })
+
+
+Then(/^deberia ver el mensaje "([^"]*)"$/, async (expectedMessage) => {
+    await LoginPage.errorMessage.waitForDisplayed({ timeout: 3000 });
+    
+    await expect(LoginPage.errorMessage).toHaveText(expectedMessage);
+})

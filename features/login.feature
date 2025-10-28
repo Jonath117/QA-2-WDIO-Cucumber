@@ -12,4 +12,4 @@ Scenario: Login exitoso con credenciales válidas
 Scenario: Login fallido con credenciales inválidas
     Given estoy en la página de login
     When ingreso "usuario_invalido" y "clave_invalida"
-    Then debería ver el mensaje "Your username is invalid!"
+    Then deberia ver el mensaje "Epic sadface: Username and password do not match any user in this service"
